@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 100px;
+            width: 100px;
+            background-color: #8d99ae;
+            margin-bottom: 30px;
+            border: 2px solid;
+            transition: all .3s linear;
+        }
+        .main-cover{
+            border-radius: 50%;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.34);
+             background-color: #7264e2;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="main"></div> -->
+    <!-- <div class="main main-cover"></div> -->
+     <div class="main"></div>
+
+
+    <button onclick="Changer()">Click</button>
+
+    <script>
+        function Changer(){
+              // In This we have to right every thing like backgroundColor,borderRadius,boxShadow and etc.
+            // But using  classList we create seprate class and add it or remove it or Toggle it.
+
+    //classList.add : for ADD thec class 
+// document.querySelector(".main").classList.add("main-cover");
+
+    //classList.add : for REMOVE thec class 
+// document.querySelector(".main").classList.remove("main-cover");
+
+    //classList.add : for TOGGLE(ADD AND REMOVE BOTH) thec class 
+document.querySelector(".main").classList.toggle("main-cover");
+
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <!-- FontAwesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="NavHead.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i onclick="toggleHamburger()" class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-ul">
+                <li class="nav-li"><a class="nav-a" href="#">Home</a></li>
+                <li class="nav-li"><a class="nav-a" href="#">About</a></li>
+                <li class="nav-li"><a class="nav-a" href="#">Menu</a></li>
+                <li class="nav-li"><a class="nav-a" href="#">Event</a></li>
+                <li class="nav-li"><a class="nav-a" href="#">Contact</a></li>
+            </ul>
+            <button class="bt">Book a Table</button>
+        </nav>
+        
+        <div class="hambuger-hide">
+            <i class="fa-solid fa-times close-menu" onclick="toggleHamburger()"></i>
+            <ul class="ham-hide-nav-ul">
+                <li class="ham-hide-nav-li"><a class="ham-hide-nav-a" href="#" onclick="closeMenu()">Home</a></li>
+                <li class="ham-hide-nav-li"><a class="ham-hide-nav-a" href="#" onclick="closeMenu()">About</a></li>
+                <li class="ham-hide-nav-li"><a class="ham-hide-nav-a" href="#" onclick="closeMenu()">Menu</a></li>
+                <li class="ham-hide-nav-li"><a class="ham-hide-nav-a" href="#" onclick="closeMenu()">Event</a></li>
+                <li class="ham-hide-nav-li"><a class="ham-hide-nav-a" href="#" onclick="closeMenu()">Contact</a></li>
+                <button class="bt" >Book a Table</button>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="backdrop" onclick="toggleHamburger()"></div>
+    
+    <section>
+        <h2 class="Hero-top">Welcome to Our Restaurant</h2>
+    </section>
+
+    <script>
+        function toggleHamburger() {
+            const hamburgerMenu = document.querySelector(".hambuger-hide");
+            const backdrop = document.querySelector(".backdrop");
+            
+            hamburgerMenu.classList.toggle("hambuger-show");
+            backdrop.classList.toggle("show");
+        }
+        
+      
+        
+ 
+    </script>
+</body>
+</html>
